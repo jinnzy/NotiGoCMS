@@ -10,6 +10,8 @@ github.com/dustin/go-humanize v1.0.0/go.mod h1:HtrtbFcZ19U5GC7JDqmcUSB87Iq5E25Kn
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
 github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
 github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/google/uuid v1.2.0 h1:qJYtXnJRWmpe7m/3XlyhrsLrEURqHRM2kxzoxXqyUDs=
+github.com/google/uuid v1.2.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1/go.mod h1:wJfORRmW1u3UXTncJ5qlYoELFm8eSnnEO6hX4iZ3EWY=
 github.com/gosimple/slug v1.9.0 h1:r5vDcYrFz9BmfIAMC829un9hq7hKM4cHUrsv36LbEqs=
 github.com/gosimple/slug v1.9.0/go.mod h1:AMZ+sOVe65uByN3kgEyf9WEBKBCSS+dJjMX9x4vDJbg=
@@ -23,6 +25,8 @@ github.com/kjk/caching_http_client v0.0.0-20190810075619-06ff809674f7 h1:QpTfahF
 github.com/kjk/caching_http_client v0.0.0-20190810075619-06ff809674f7/go.mod h1:uZMXWOA3unK8KYdy6aBIel64MMqZwsRFRKIvgSadLAU=
 github.com/kjk/notionapi v0.0.0-20201107214737-0d0221669d7c h1:G9jSc9jFhzWhCJlzJ2QoGvx09ERhq7z30EG6DTdITIo=
 github.com/kjk/notionapi v0.0.0-20201107214737-0d0221669d7c/go.mod h1:TN6VHOLMXTSoGSaXDKTqvw5Aos628adXJAXSKvjTTRI=
+github.com/kjk/notionapi v0.0.0-20201230072046-b69038831038 h1:CK6E4bdxrndNPbHQ3IDU2JzzpqlkVqXIR8KRBNafh7Y=
+github.com/kjk/notionapi v0.0.0-20201230072046-b69038831038/go.mod h1:TN6VHOLMXTSoGSaXDKTqvw5Aos628adXJAXSKvjTTRI=
 github.com/kjk/siser v0.0.0-20190801014033-b3367920d7f2 h1:vrqsThWMeIUgprELZhUEw0wFu/LJANlftGo6US4vIDg=
 github.com/kjk/siser v0.0.0-20190801014033-b3367920d7f2/go.mod h1:5VyY+9nF1wpSfWAIM/mIrd0fZCiA/6IK6CSf3PnjfMA=
 github.com/kjk/u v0.0.0-20191229080709-d1ac8976d53f/go.mod h1:5DUexog+kFLzpHxAQ7R9Of0N8DdhUjbpWGgnc41TMK4=

@@ -54,7 +54,7 @@ func verbose(format string, args ...interface{}) {
 }
 
 var (
-	doTempLog = false
+	doTempLog = true
 )
 
 func logTemp(format string, args ...interface{}) {

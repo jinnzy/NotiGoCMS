@@ -481,6 +481,7 @@ func (a *Article) processBlocks(blocks []*notionapi.Block) {
 
 		if parsingMeta {
 			parsingMeta = a.maybeParseMeta(nBlock, block)
+			fmt.Println(parsingMeta)
 			if parsingMeta {
 				a.markBlockToSkip(block)
 				continue
@@ -549,9 +550,7 @@ func notionPageToArticle(c *notionapi.Client, page *notionapi.Page) *Article {
 
 	a.PublishedOn = root.CreatedOn()
 	a.UpdatedOn = root.LastEditedOn()
-
 	a.processBlocks(page.Root().Content)
-
 	if !a.publishedOnOverwrite.IsZero() {
 		a.PublishedOn = a.publishedOnOverwrite
 	}

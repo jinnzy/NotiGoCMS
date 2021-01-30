@@ -86,8 +86,8 @@ func (c *Converter) RenderBlockCode(block *notionapi.Block) bool {
 
 	code := block.Code
 	language := block.CodeLanguage
-	start := "{{< highlight " + codeLanguageMap[language] + " >}}"
-	end := "{{< / highlight >}}"
+	start := "```" + codeLanguageMap[language]
+	end := "```"
 
 	c.r.Printf(start + "\n")
 
@@ -120,7 +120,7 @@ func (c *Converter) RenderPage(block *notionapi.Block) bool {
 	url, title := c.getURLAndTitleForBlock(block)
 	title = html.EscapeString(title)
 	c.r.Printf("[%s](%s)\n", url, title)
-	
+
 	return true
 }
 

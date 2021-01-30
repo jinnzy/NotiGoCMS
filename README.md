@@ -45,6 +45,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+fork了这个项目做了一些修改
+1. 将代码块修改为'```'
+2. 增加文章分类的字段
+
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 This program is responsible for fetching your Notion pages and converting them into markdown files along with their static contents
