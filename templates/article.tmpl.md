@@ -7,8 +7,7 @@ featured_image: "{{.Article.HeaderImageURL}}"
 draft: false
 toc: true
 tags: {{ .Article.Tags }}
-categories:
-- ""
+categories: {{ .Article.Categories}}
 ---
 
 {{.Article.HTMLBody}}

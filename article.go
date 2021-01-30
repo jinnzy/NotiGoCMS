@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/gosimple/slug"
 	"github.com/kjk/notionapi"
 	"github.com/kjk/u"
-	"github.com/gosimple/slug"
 )
 
 // for Article.Status
@@ -67,6 +67,7 @@ type Article struct {
 	UpdatedOn            time.Time
 	Title                string
 	Tags                 []string
+	Categories           []string
 	BodyHTML             string
 	HTMLBody             template.HTML
 	HeaderImageURL       string
@@ -372,7 +373,6 @@ func (a *Article) maybeParseMeta(nBlock int, block *notionapi.Block) bool {
 		logTemp("extractMetadata: ending look because block %d is of type %s\n", nBlock, block.Type)
 		return false
 	}
-
 	if len(block.InlineContent) == 0 {
 		logTemp("block %d of type %s and has no InlineContent\n", nBlock, block.Type)
 		return true
@@ -455,6 +455,9 @@ func (a *Article) maybeParseMeta(nBlock int, block *notionapi.Block) bool {
 		a.setCollectionMust(val)
 	case "url":
 		a.urlOverride = val
+	case "categories":
+		a.Categories = parseTags(val)
+		logTemp("Categories: %v\n", a.Tags)
 	default:
 		// assume that unrecognized meta means this article doesn't have
 		// proper meta tags. It might miss meta-tags that are badly named
@@ -481,7 +484,6 @@ func (a *Article) processBlocks(blocks []*notionapi.Block) {
 
 		if parsingMeta {
 			parsingMeta = a.maybeParseMeta(nBlock, block)
-			fmt.Println(parsingMeta)
 			if parsingMeta {
 				a.markBlockToSkip(block)
 				continue

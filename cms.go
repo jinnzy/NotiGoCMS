@@ -2,8 +2,10 @@ package main
 
 import (
 	"flag"
+	"net/http"
 	_ "net/url"
 	"os"
+	"time"
 
 	"github.com/kjk/notionapi"
 	"github.com/kjk/notionapi/caching_downloader"
@@ -65,8 +67,11 @@ func newNotionClient() *notionapi.Client {
 		os.Exit(1)
 	}
 	// TODO: verify token still valid, somehow
+	httpClient := http.DefaultClient
+	httpClient.Timeout = 120*time.Second
 	client := &notionapi.Client{
 		AuthToken: token,
+		HTTPClient: httpClient,
 	}
 	if flgVerbose {
 		client.Logger = os.Stdout

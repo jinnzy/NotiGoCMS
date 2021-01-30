@@ -6,7 +6,7 @@
 *.so
 *.dylib
 log.txt
-
+blog
 .DS_Store
-
+setup_env.sh
 NotiGoCMS
