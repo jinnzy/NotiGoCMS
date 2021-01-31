@@ -484,9 +484,6 @@ func (a *Article) processBlocks(blocks []*notionapi.Block) {
 
 		if parsingMeta {
 			parsingMeta = a.maybeParseMeta(nBlock, block)
-			fmt.Println(a.Tags)
-			fmt.Println(len(a.Tags))
-			fmt.Println(a.Categories)
 			if parsingMeta {
 				a.markBlockToSkip(block)
 				continue
