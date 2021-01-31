@@ -1,17 +1,14 @@
 #!/bin/bash
 #set -u -e -o pipefail
 
-export NOTION_TOKEN=d1ab20cd92feb723f825d091fbedbc370e75ed12e795d8bc1a5315eb985b8ac2a2c0fd8394a4ffda0ec8b4a8efa1ddd1e58cc908da49ac7ee853066f3c80e82fe24ef4ce9de2ff4a754e06d0a9e4
-# setup git
-git config user.email "839444083@qq.com"
-git config user.name "jinnzy"
-
-#[ -d "blog" ] && git rm -r --cached blog
-#rm -rf blog
-
-#git submodule add --force git@github.com:jinnzy/jinnzy.github.io.source.git blog
-git clone git@github.com:jinnzy/jinnzy.github.io.source.git blog
-./NotiGoCMS
+#export NOTION_TOKEN=d1ab20cd92feb723f825d091fbedbc370e75ed12e795d8bc1a5315eb985b8ac2a2c0fd8394a4ffda0ec8b4a8efa1ddd1e58cc908da49ac7ee853066f3c80e82fe24ef4ce9de2ff4a754e06d0a9e4
+## setup git
+#git config user.email "839444083@qq.com"
+#git config user.name "jinnzy"
+#
+#
+#git clone git@github.com:jinnzy/jinnzy.github.io.source.git blog
+#./NotiGoCMS
 
 #cd blog
 #git status
