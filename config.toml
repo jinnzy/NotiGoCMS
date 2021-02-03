@@ -1,6 +1,6 @@
 # Notion configurations
 [notion]
-startPage = "d6ed91cfa9c243058b5eea7c69bf36c0"
+startPage = "d796116dc4a74840a95e4a62e294bdef"
 # CMS Configurations
 [cms]
 cacheDir = "cache"
